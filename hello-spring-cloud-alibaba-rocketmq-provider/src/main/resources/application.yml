@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rocketmq-provider
+  cloud:
+    stream:
+      bindings:
+        output: {content-type: application/json,destination: test-topic}
+      rocketmq:
+        binder:
+          name-server: 192.168.72.128:9876
+server:
+  port: 9093
